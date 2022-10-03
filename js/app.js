@@ -1,5 +1,6 @@
 //este tipo de import importa todos los modulos de interfaz en una sola linea
 import * as UI from './interfaz.js'
+import API from './api.js'
 
 UI.formularioBuscar.addEventListener('submit', buscarCancion)
 
@@ -25,4 +26,6 @@ function buscarCancion(e) {
     }
 
     //Consultar API
+    const busqueda = new API(artista, cancion)
+    busqueda.consultarAPI()
 }
